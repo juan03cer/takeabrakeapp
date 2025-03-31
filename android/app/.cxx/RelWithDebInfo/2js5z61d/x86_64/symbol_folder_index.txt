@@ -1,0 +1,1 @@
+/Users/juancarlos/Documents/Escuela/vinicio/takeabrakeapp/android/app/build/intermediates/cxx/RelWithDebInfo/2js5z61d/obj/x86_64
