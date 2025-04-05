@@ -1,12 +1,12 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, useColorScheme } from "react-native";
 import { white } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 const globalStyles = StyleSheet.create({
     contenedor:{
-        flex:1
+        flex:1,
     },
     contenedorinterno: {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', // Fondo semitransparente
+    backgroundColor: 'rgba(255, 248, 241, 0.8)', // Fondo semitransparente
     borderRadius:25,
     padding:25,
     width: '90%', // Ajusta el ancho del contenedor interno
@@ -25,18 +25,27 @@ const globalStyles = StyleSheet.create({
         fontWeight: 'bold',
         color:"#000000"
     },
-    input:{
-        backgroundColor: 'transparent',
+    input: {
+        backgroundColor: 'transparent', // fondo suave, no transparente
+        borderColor: '#CCCCCC',
+        borderWidth: 1,
+        borderRadius: 8,
+        paddingHorizontal: 12,
+        paddingVertical: 10,
+        fontSize: 16,
+        borderStyle: 'solid',
     },
     boton:{
-       backgroundColor:'#6C4A91',        
+       backgroundColor:'#3b82f6',        
     },
     botonTexto:{
         fontWeight:'bold',
         color:'white'
     },
     texto:{
-        color:'white'
+        color: '#3A6EA5', // azul más fuerte, más visible sobre fondo claro
+        fontSize: 16,
+        fontWeight: '600',
     },
     contenedorbotones:{
         alignItems:"center",
@@ -52,7 +61,7 @@ const globalStyles = StyleSheet.create({
         alignItems: "center",  
     },
     botones:{
-        backgroundColor: "#911DB7",
+        backgroundColor: "#D6E6F5",
         paddingVertical: 15,
         paddingHorizontal: 40,
         borderRadius: 30,
@@ -68,7 +77,7 @@ const globalStyles = StyleSheet.create({
         borderRadius:25,
     },
     enlace:{
-        color:'gray',
+        color:'black',
         marginTop:30,
         textAlign:'center',
         fondWeight:'bold',
@@ -81,7 +90,7 @@ const globalStyles = StyleSheet.create({
         padding: 10,
     },
     encerrarMenu:{
-        backgroundColor: 'rgba(211, 164, 229, 0.8)', // Color lila con transparencia
+        backgroundColor: 'rgba(20, 235, 31, 0.8)', // Color lila con transparencia
         padding: 15,
         borderRadius: 20,
         maxWidth: '80%',

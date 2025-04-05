@@ -29,7 +29,7 @@ const App = () => {
             options={{
               title: "Crear Cuenta",
               headerStyle: {
-                backgroundColor: 'gray',
+                backgroundColor: '#D6E6F5',
               },
               headerTintColor: 'black',
               headerTitleStyle: {
@@ -43,7 +43,7 @@ const App = () => {
             options={{
               title:"Chat",
               headerStyle:{
-                backgroundColor:'gray'
+                backgroundColor:'#D6E6F5'
               },
               headerTintColor:'black',
               headerBackTitleStyle:{

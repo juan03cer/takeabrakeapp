@@ -6,7 +6,7 @@ contenedor:{
     padding:20
 },
 contenedorinterno:{
-    backgroundColor: "rgba(138, 28, 202, 0.8)", // Fondo blanco semitransparente
+    backgroundColor: "rgba(167, 199, 231, 0.8)", // Fondo blanco semitransparente
     borderRadius: 15,
     padding: 20,
     shadowColor: "#000",
@@ -25,7 +25,7 @@ input:{
 titulo:{
     fontSize: 22,
     fontWeight: "bold",
-    color: "#6A0572", // Morado intenso
+    color: "#A7C7E7", // Morado intenso
     textAlign: "center",
     marginBottom: 15,
 

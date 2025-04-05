@@ -69,7 +69,7 @@ const CrearCuenta = () => {
     
     
   return (
-    <View style={[globalStyles.contenedor, {backgroundColor: 'gray'}]}>
+    <View style={[globalStyles.contenedor, {backgroundColor: '#D6E6F5'}]}>
         <View style={[globalStyles.contenido]}>
            <View style={[globalStyles.contenedorinterno]}>
            <Image source={require('../public/img/logo.jpg')} style={globalStyles.imgtortuga}/>
@@ -80,17 +80,14 @@ const CrearCuenta = () => {
                 <View style={styles.form}>
                     <TextInput style={[globalStyles.input]}
                     label="Nombre"
-                    mode="outlined"
                     onChangeText={texto=>guardarNombre(texto)}
                     />
                     <TextInput style={[globalStyles.input]}
                     label="Correo"
-                    mode="outlined"
                     onChangeText={texto=>guardarEmail(texto)}
                     />
                     <TextInput style={[globalStyles.input]}
                     label="Contraseña"
-                    mode="outlined"
                     onChangeText={texto=>guardarPassword(texto)}
                     secureTextEntry={true}
                     />

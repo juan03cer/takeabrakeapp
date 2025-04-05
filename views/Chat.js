@@ -231,7 +231,7 @@ const Chat = () => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff8f1'
   },
   keyboardAvoidingView: {
     flex: 1
@@ -241,8 +241,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
-    backgroundColor: '#fff'
+    borderBottomColor: '#3b82f6',
+    backgroundColor: '#fff8f1'
   },
   avatar: {
     width: 40,
@@ -287,12 +287,12 @@ const styles = StyleSheet.create({
     elevation: 2
   },
   botMessage: {
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#D6E6F5',
     alignSelf: 'flex-start',
     borderBottomLeftRadius: 4
   },
   userMessage: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#A7C7E7',
     alignSelf: 'flex-end',
     borderBottomRightRadius: 4
   },
@@ -304,7 +304,7 @@ const styles = StyleSheet.create({
     color: '#333'
   },
   userMessageText: {
-    color: '#fff'
+    color: '#333'
   },
   messageTime: {
     fontSize: 11,

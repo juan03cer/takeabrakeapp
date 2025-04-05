@@ -1,10 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { Button, Text, TextInput, Headline } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import globalStyles from '../styles/global';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { gql, useMutation } from '@apollo/client';
+import { useColorScheme } from 'react-native';
 
 const AUTENTICAR_USUARIO = gql`
   mutation autenticarUsuario($input: AutenticarInput) {
@@ -14,7 +15,22 @@ const AUTENTICAR_USUARIO = gql`
   }
 `;
 
+
+
 const Login = () => {
+  const colorScheme = useColorScheme(); // detecta si es 'light' o 'dark'
+  const [textColor, setTextColor] = useState('#274472'); // color por defecto para modo claro
+
+  useEffect(() => {
+    // Cambiar el color según el esquema del dispositivo
+    if (colorScheme === 'dark') {
+      setTextColor('#000000'); // texto para modo oscuro
+    } else {
+      setTextColor('#274472'); // texto para modo claro
+    }
+  }, [colorScheme]);
+
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mensaje, setMensaje] = useState(null);
@@ -53,8 +69,9 @@ const Login = () => {
     setMensaje(null);
   };
 
+
   return (
-    <View style={[globalStyles.contenedor, { backgroundColor: 'gray' }]}>
+    <View style={[globalStyles.contenedor, { backgroundColor: '#D6E6F5' }]}>
       <View style={[globalStyles.contenido]}>
         <View style={[globalStyles.contenedorinterno]}>
         <Image source={require('../public/img/logo.jpg')} style={globalStyles.imgtortuga}/>
@@ -64,25 +81,23 @@ const Login = () => {
           <View style={styles.form}>
             <View style={[globalStyles.input]}>
               <TextInput
-                style={[globalStyles.input]}
+                style={[globalStyles.input, { color: textColor }]} // Aplica el color dinámicamente
                 label="Correo"
-                mode="outlined"
                 keyboardType="email-address"
                 autoCapitalize="none"
                 autoComplete="email"
                 onChangeText={handleEmailChange}
                 defaultValue={email} 
-                theme={{ colors: { text: 'black', background: 'white' } }}
               />
               <TextInput
-                style={[globalStyles.input]}
+                style={[globalStyles.input, { color: textColor }]} // Aplica el color dinámicamente
                 label="Contraseña"
-                mode="outlined"
                 secureTextEntry
                 autoCapitalize="none"
                 autoComplete="password"
                 onChangeText={handlePasswordChange}
                 defaultValue={password} 
+                
               />
             </View>
           </View>
